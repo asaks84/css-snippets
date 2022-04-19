@@ -9,6 +9,8 @@
         html, body{
             height: 100%;
             background-color: grey;
+            margin: 0;
+            padding: 0;
         }
         #container{
             display: flex;
@@ -19,37 +21,45 @@
         }
         main {
             display: flex;
-            width: 100%;
+            width: 80%;
             justify-content: center;
         }
         #board{
             min-width: 300px;
-            width: auto;
-            max-width: 600px;
+            width: 100%;
             min-height: 200px;
             display: flex;
             align-items: center;
-            border: 1px solid black;
-            gap: 15px;
+            
+            gap: 5px;
         }
         #codes{
             width: 60%;
+            height: 100%;
         }
-        code {
+        .code{
             border-radius:5px;
             border: 1px solid white;
             color: white;
-            min-width: 200px;
-            width: 100%;
+            margin:  5px;
+            background-color: rgb(95, 95, 95);
+            padding: 0 15px;
+        }
+        code {
+            padding: 10px 0;
             display: block;
-            padding: 10px 5px;
-            margin: 5px 3px;
+            
+        }
+        code:focus{
+            outline: none;
         }
         #result {
             width: 40%;
             display: flex;
-            border: 1px dashed white;
             justify-content: center;
+        }
+        #codes, #result{
+            border: 1px dashed white;
         }
         #result div{
             width: 200px;
@@ -68,9 +78,15 @@
     <main>
         <section id="board">
             <section id="codes">
-                <code contenteditable="true">border-radius: 50%;</code>
-                <code contenteditable="true">border-radius: 50%;</code>
-                <code contenteditable="true">border-radius: 50%;</code>
+                <div class="code">
+                    <code contenteditable="true">border-radius: 50%;</code>
+                </div>
+                <div class="code">
+                    <code contenteditable="true">border-radius: 50%;</code>
+                </div>
+                <div class="code">
+                    <code contenteditable="true">border-radius: 50%;</code>
+                </div>
             </section>
             <section id="result"><div></div></section>
         </section>
